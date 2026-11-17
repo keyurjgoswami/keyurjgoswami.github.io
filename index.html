@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyur Goswami — Cybersecurity Architect</title>
+<meta name="description" content="Keyur Goswami — cybersecurity leader with 14+ years across network, cloud, and cyber security. Zero Trust architecture, CISSP, CCSP, AZ-500, ISO 27001 Lead Auditor. Full career history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16181c;
+    --body:#3d4148;
+    --soft:#7a7f87;
+    --rule:#dcdee2;
+    --rule-soft:#ebedf0;
+    --bg:#fefefe;
+    --bg-alt:#f7f7f6;
+    --max:1360px;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--bg);color:var(--body);
+    font-size:16.5px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--ink);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  .wrap{width:min(var(--max),92vw);margin:0 auto;padding:0 40px}
+  @media(max-width:640px){.wrap{padding:0 24px}}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(254,254,254,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .nav-inner{
+    width:min(var(--max),92vw);margin:0 auto;padding:16px 40px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .nav-name{
+    font-size:13px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink);
+  }
+  .nav-name:hover{text-decoration:none}
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{
+    font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--soft);font-weight:500;
+  }
+  .nav-links a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* ---------- HEADER ---------- */
+  header{padding:96px 0 64px;border-bottom:1px solid var(--ink)}
+  h1{
+    font-size:clamp(34px,6vw,58px);font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink);line-height:1.08;margin-bottom:18px;
+  }
+  .role-line{
+    font-size:clamp(15px,2vw,19px);color:var(--body);
+    letter-spacing:.02em;margin-bottom:14px;font-weight:500;
+  }
+  .contact-line{
+    font-size:13.5px;color:var(--soft);
+    display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;
+  }
+  .contact-line a{color:var(--soft)}
+  .contact-line a:hover{color:var(--ink)}
+  .contact-line .dot{color:var(--rule)}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:68px 0;border-bottom:1px solid var(--rule-soft)}
+  section:last-of-type{border-bottom:none}
+  section:nth-of-type(even){background:var(--bg-alt)}
+  .grid{display:grid;grid-template-columns:250px minmax(0,1fr);column-gap:72px;align-items:start}
+  @media(max-width:880px){
+    .grid{grid-template-columns:1fr}
+    .label{margin-bottom:28px;position:static}
+    section{padding:52px 0}
+  }
+  .label{position:sticky;top:78px}
+  h2{
+    font-size:12px;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink);
+    padding-bottom:10px;border-bottom:1px solid var(--rule);
+  }
+  .label .note{font-size:12.5px;color:var(--soft);margin-top:12px;line-height:1.5}
+
+  /* ---------- PROFILE ---------- */
+  .profile p{max-width:960px;color:var(--body)}
+  .profile p+p{margin-top:16px}
+  .profile strong{color:var(--ink);font-weight:600}
+
+  /* ---------- ACHIEVEMENTS ---------- */
+  .ach{list-style:none;max-width:800px}
+  .ach li{position:relative;padding-left:24px;margin-bottom:14px;color:var(--body);font-size:16px}
+  .ach li:last-child{margin-bottom:0}
+  .ach li::before{content:"";position:absolute;left:0;top:12px;width:12px;height:1px;background:var(--soft)}
+  .ach strong{color:var(--ink);font-weight:600}
+
+  /* ---------- EXPERIENCE ---------- */
+  .role{padding-bottom:38px;max-width:980px}
+  .role:last-child{padding-bottom:0}
+  .role-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;
+    justify-content:space-between;gap:4px 18px;margin-bottom:2px;
+  }
+  .role-title{font-size:17.5px;font-weight:600;color:var(--ink)}
+  .role-title .sep{color:var(--soft);font-weight:400;margin:0 8px}
+  .role-title .co{font-weight:400;color:var(--body)}
+  .role-dates{font-size:13px;color:var(--soft);white-space:nowrap}
+  .role ul{list-style:none;margin-top:12px}
+  .role li{position:relative;padding-left:24px;margin-bottom:8px;color:var(--body);font-size:15.5px}
+  .role li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:1px;background:var(--rule)}
+  .role li b{color:var(--ink);font-weight:600}
+
+  /* ---------- COMPETENCIES ---------- */
+  .comp{max-width:980px}
+  .comp-row{padding:16px 0;border-bottom:1px solid var(--rule-soft)}
+  .comp-row:first-child{padding-top:0}
+  .comp-row:last-child{border-bottom:none;padding-bottom:0}
+  .comp-label{
+    font-size:12px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink);margin-bottom:7px;
+  }
+  .comp-items{font-size:15px;color:var(--body);line-height:1.7}
+
+  /* ---------- DATED LISTS ---------- */
+  .dl{list-style:none;max-width:980px}
+  .dl li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+    padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:15.5px;
+  }
+  .dl li:first-child{padding-top:0}
+  .dl li:last-child{border-bottom:none}
+  .dl .name{color:var(--ink)}
+  .dl .date{font-size:13px;color:var(--soft);white-space:nowrap}
+  @media(max-width:560px){.dl li{flex-direction:column;gap:3px}}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-name{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px}
+  .edu-sub{font-size:15.5px;color:var(--body)}
+  .edu-date{font-size:13px;color:var(--soft);margin-top:6px}
+
+  /* ---------- CONTACT ---------- */
+  .contact p{max-width:760px;margin-bottom:26px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    padding:13px 24px;border:1px solid var(--rule);color:var(--ink);
+    transition:border-color .18s,background .18s;
+  }
+  .btn:hover{border-color:var(--ink);text-decoration:none}
+  .btn.solid{background:var(--ink);border-color:var(--ink);color:#fff}
+  .btn.solid:hover{background:#000}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--rule);padding:30px 0 48px;font-size:12.5px;color:var(--soft)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-name">Keyur Goswami</a>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#competencies">Competencies</a>
+      <a href="#certifications">Credentials</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <h1>Keyur Goswami</h1>
+    <p class="role-line">Cybersecurity Architect</p>
+    <div class="contact-line">
+      <span>Bengaluru, India</span><span class="dot">·</span>
+      <a href="tel:+919033876035">+91 90338 76035</a><span class="dot">·</span>
+      <a href="mailto:keyur.j.goswami@gmail.com">keyur.j.goswami@gmail.com</a><span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/keyurjgoswami/" target="_blank" rel="noopener">linkedin.com/in/keyurjgoswami</a>
+    </div>
+  </div>
+</header>
+
+<section id="profile">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Profile</h2></div>
+    <div class="profile reveal">
+      <p>Cybersecurity leader with <strong>14+ years</strong> across network, cloud, and cyber security, currently leading Zero Trust transformation programmes for global enterprises. <strong>CISSP, CCSP, AZ-500,</strong> and <strong>ISO 27001 Lead Auditor</strong> certified, combining deep architecture expertise with team leadership and delivery excellence.</p>
+      <p>My career spans the full journey — from an internship and hands-on network engineering at Elitecore and Cyberoam, through frontline support and quality leadership at Sophos, to architecting enterprise-wide Zero Trust solutions and advising security leaders today.</p>
+      <p>What defines my work is solution design, problem solving, and critical thinking: turning complex security challenges into clear, measurable business outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap grid">
+    <div class="label reveal">
+      <h2>Experience</h2>
+      <p class="note">Full career history<br>2012 → Present</p>
+    </div>
+    <div>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Technical Architect<span class="sep">|</span><span class="co">Tata Consultancy Services</span></span>
+          <span class="role-dates">Sept 2025 — Present</span>
+        </div>
+        <ul>
+          <li>Lead a <b>team of engineers</b> delivering Zero Trust transformation for a leading US insurance brokerage (BFSI), owning solution design, change governance, and hypercare through to steady-state support</li>
+          <li>Scaled Zscaler ZPA from a 1,000-user pilot past <b>60,000 users</b> — 40,000 of them within the first nine months — replacing legacy Always On VPN (AOVPN) across multi-region data centers with zero business disruption</li>
+          <li>Deployed Zscaler <b>Privileged Remote Access (PRA)</b> into production, and designed <b>Private Service Edge</b>, <b>Private Cloud Controller</b> and DR/BCP architecture, validated in pilot to de-risk production rollout in a regulated financial services environment</li>
+          <li>Deployed Zero Trust Branch Connector (ZTB) across branch sites, improving application access performance by <b>30%</b> while cutting network complexity</li>
+          <li>Cut VDI infrastructure costs by <b>25%</b> with Browser Access and Browser Isolation, reducing third-party access risk and strengthening supply chain security</li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Sr. Technical Support Engineer<span class="sep">|</span><span class="co">RedSeal</span></span>
+          <span class="role-dates">Mar 2023 — Aug 2025</span>
+        </div>
+        <ul>
+          <li>Secured DoDIN and Common Criteria certifications for RedSeal, retaining <b>70% of federal customers</b> while strengthening network security, risk management, and compliance</li>
+          <li>Drove the Vulnerability Disclosure Program (VDP) with internal security teams, shrinking the attack surface across internal IT infrastructure</li>
+          <li>Delivered a <b>35% drop</b> in high-priority vulnerabilities across key infrastructure layers by enabling clients with industry tools and best practices</li>
+          <li>Ensured strict compliance with NIST, PCI-DSS, GDPR, and HIPAA frameworks, decreasing audit findings and reinforcing organizational security credibility</li>
+          <li>Reduced risk exposure by <b>35%</b> for key client infrastructure by tracking emerging threats and implementing timely countermeasures</li>
+          <li>Facilitated the CTEM vendor initiative targeting Gartner Magic Quadrant recognition, enhancing threat detection capabilities across business units</li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Technical Lead<span class="sep">|</span><span class="co">Wipro</span></span>
+          <span class="role-dates">Sep 2021 — Mar 2023</span>
+        </div>
+        <ul>
+          <li>Led a <b>support team</b> for Zscaler ZIA, ZPA, and ZDX across enterprise clients, providing technical direction, coaching, and escalation ownership</li>
+          <li>Led ZPA deployment for third-party contractor access at a leading UK insurance provider, enabling secure inter-application access while eliminating broad network-level trust</li>
+          <li>Advised client CISOs and Security Architects on evolving threats, shaping security strategies that improved enterprise risk posture</li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Product Support Engineer 3<span class="sep">|</span><span class="co">Zscaler Softech India</span></span>
+          <span class="role-dates">Aug 2020 — Sep 2021</span>
+        </div>
+        <ul>
+          <li>Achieved a <b>95% resolution rate</b> on Zscaler ZIA, ZPA, DLP, CASB, and ZDX cases for Top 100 and Platinum customers, accelerating resolution timelines</li>
+          <li>Coached L1/L2 engineers through weekly training sessions, lifting analytical proficiency and team responsiveness</li>
+          <li>Reduced product management dependency by <b>25%</b> by coordinating and resolving major escalations from sales, customers, and internal teams</li>
+          <li>Reproduced customer issues in lab environments to diagnose root causes, escalating verified bugs to engineering and driving product improvements</li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Technical Support Engineer L2–3<span class="sep">|</span><span class="co">Sophos Technologies</span></span>
+          <span class="role-dates">Jul 2019 — Aug 2020</span>
+        </div>
+        <ul>
+          <li>Mentored 7 L1 engineers and collaborated with escalation engineers, achieving a <b>30% increase</b> in junior engineer resolution accuracy on complex cases</li>
+          <li>Operated @SophosSupport on Twitter, managing escalations promptly and increasing customer resolution confidence with precise real-time public responses</li>
+          <li>Supported global communities on Reddit, Spiceworks, and Sophos forums — resolving escalations, identifying bugs, and increasing engagement by <b>35%</b></li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Quality Auditor — Technical Support<span class="sep">|</span><span class="co">Sophos Technologies</span></span>
+          <span class="role-dates">Sep 2016 — Jun 2019</span>
+        </div>
+        <ul>
+          <li>Audited L1/L2 engineer cases and support interactions across regions and channels, achieving a <b>15% improvement</b> in customer satisfaction</li>
+          <li>Facilitated monthly feedback and calibration sessions with managers and team leads, aligning engineer contributions with organizational goals</li>
+          <li>Produced instructional videos for audit tools, reporting, and quality processes, leading to a <b>25% decrease</b> in onboarding time</li>
+          <li>Analysed customer feedback and case data to identify recurring issues, improving support processes and shortening escalations by <b>20%</b></li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Technical Support Engineer<span class="sep">|</span><span class="co">Sophos Technologies</span></span>
+          <span class="role-dates">Jun 2014 — Aug 2016</span>
+        </div>
+        <ul>
+          <li>Administered high-priority network and security issues across APAC, the Middle East, and Europe using Cyberoam and Sophos tools, contributing to a <b>25% reduction</b> in resolution time</li>
+          <li>Maintained <b>98% SLA compliance</b>, FDR, and customer satisfaction across end-users, partners, and clients</li>
+          <li>Captured network packets with sniffer tools, maintaining RFC compliance, identifying attack vectors, and advancing detection rates by <b>40%</b></li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Network Security Engineer<span class="sep">|</span><span class="co">Cyberoam Technologies (Elitecore)</span></span>
+          <span class="role-dates">May 2012 — May 2014</span>
+        </div>
+        <ul>
+          <li>Coordinated with global customers and authorized partners across APAC, India, the Middle East, Africa, and Europe, resolving complex network issues</li>
+          <li>Maintained first-day resolution, customer satisfaction, and technical skill scores above <b>90%</b>, surpassing case resolution targets</li>
+          <li>Achieved <b>100% FDR</b> throughout the year, resolving all customer issues on the first day</li>
+        </ul>
+      </article>
+
+      <article class="role reveal">
+        <div class="role-head">
+          <span class="role-title">Network Security Intern<span class="sep">|</span><span class="co">Elitecore Technologies</span></span>
+          <span class="role-dates">Feb 2012 — May 2012</span>
+        </div>
+        <ul>
+          <li>Completed a three-month internship in network security fundamentals, converting to a full-time Network Security Engineer role in May 2012</li>
+          <li>Built foundational expertise in UTM firewall administration, packet analysis, and customer troubleshooting on the Cyberoam platform</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="competencies">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Core Competencies</h2></div>
+    <div class="comp reveal">
+      <div class="comp-row">
+        <div class="comp-label">Network Security</div>
+        <p class="comp-items">Zero Trust / ZTNA, SASE &amp; SSE, Zscaler ZIA / ZPA / ZDX, Firewall &amp; UTM, IPsec &amp; SSL/TLS VPN, Proxies, Micro-segmentation, TCP/IP, DNS, HTTP/S, SAML, SCIM, NSPM, Wireshark &amp; Packet Analysis</p>
+      </div>
+      <div class="comp-row">
+        <div class="comp-label">Cyber Security</div>
+        <p class="comp-items">Security Architecture, Vulnerability Management, Incident Response, CASB &amp; DLP, MITRE ATT&amp;CK, Cyber Kill Chain, OWASP, CSPM, Cloud Security (Azure), Linux, AI Ethics &amp; Governance</p>
+      </div>
+      <div class="comp-row">
+        <div class="comp-label">Governance, Risk &amp; Compliance</div>
+        <p class="comp-items">ISO 27001, NIST CSF &amp; 800-53, PCI-DSS, GDPR, HIPAA, DPDP Act, STIG / CIS, Risk Assessment, Auditing, TPRM, Data Privacy, ITIL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Certifications &amp; Continuous Learning</h2></div>
+    <div class="reveal">
+      <ul class="dl">
+        <li><span class="name">Microsoft Certified: Azure Security Engineer Associate (AZ-500)</span><span class="date">Jun 2026</span></li>
+        <li><span class="name">ISO 27001 Lead Auditor (CQI-IRCA) — BSI</span><span class="date">Jul 2025</span></li>
+        <li><span class="name">McKinsey.org Forward Program — leadership and problem-solving development</span><span class="date">Jul 2025</span></li>
+        <li><span class="name">Certified Cloud Security Professional (CCSP) — (ISC)²</span><span class="date">Feb 2025</span></li>
+        <li><span class="name">Certified Customer Success Manager (CCSM)</span><span class="date">Dec 2024</span></li>
+        <li><span class="name">Certified Information Systems Security Professional (CISSP) — (ISC)²</span><span class="date">Feb 2024</span></li>
+        <li><span class="name">Zscaler Certified Cloud Professional — ZIA / ZPA</span><span class="date">Dec 2022</span></li>
+        <li><span class="name">Certified in Cybersecurity (CC) — (ISC)²</span><span class="date">Nov 2022</span></li>
+        <li><span class="name">CompTIA Security+ ce</span><span class="date">Apr 2021</span></li>
+        <li><span class="name">Qualys Certified Specialist — Vulnerability Management</span><span class="date">Apr 2020</span></li>
+        <li><span class="name">Certified Ethical Hacker — EC-Council</span><span class="date">Jun 2016</span></li>
+        <li><span class="name">Red Hat Certified System Administrator</span><span class="date">Aug 2015</span></li>
+        <li><span class="name">ITIL® Foundation Certificate in IT Service Management</span><span class="date">Dec 2013</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Community</h2></div>
+    <div class="reveal">
+      <ul class="dl">
+        <li><span class="name"><strong>(ISC)² Cybersecurity Exam Development Volunteer</strong> — three-day CCSP exam item development workshop</span><span class="date">Oct 2025</span></li>
+        <li><span class="name">BSides security conferences — annual attendee, staying current with emerging threats, tooling, and research</span><span class="date">2021 — Present</span></li>
+        <li><span class="name">(ISC)² chapter — active member, knowledge sharing and professional development</span><span class="date">Ongoing</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Education</h2></div>
+    <div class="reveal">
+      <p class="edu-name">Diploma in Electronics and Communication</p>
+      <p class="edu-sub">Swami Sachchidanand Polytechnic College</p>
+      <p class="edu-date">2005 — 2008</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap grid">
+    <div class="label reveal"><h2>Contact</h2></div>
+    <div class="contact reveal">
+      <p>Open to conversations about security architecture, Zero Trust transformation, and enterprise risk. The fastest way to reach me is email or LinkedIn.</p>
+      <div class="btns">
+        <a class="btn solid" href="mailto:keyur.j.goswami@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/keyurjgoswami/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="tel:+919033876035">+91 90338 76035</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Keyur Goswami</span>
+    <span>Bengaluru, India</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
